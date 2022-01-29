@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginHorizontal="10dp">
+    <TextView
+        android:id="@+id/task_item_time"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/main_list_item_time_font"
+        android:textStyle="bold"
+        android:layout_marginTop="2dp"
+        android:autoLink="email"
+        android:layout_marginStart="2dp"
+        android:background="@drawable/task_list_time"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageView
+        android:id="@+id/task_item_list_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_task_list_icon"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/task_item_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:contentDescription="@string/task_item_has_list_desc" />
+
+    <ImageView
+        android:id="@+id/task_item_contacts_icon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/ic_task_contacts_icon"
+        android:layout_marginEnd="3dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/task_item_name"
+        app:layout_constraintEnd_toStartOf="@+id/task_item_list_icon"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        android:contentDescription="@string/task_item_has_contact_list_desc" />
+
+    <TextView
+        android:id="@+id/task_item_name"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/form_input_font"
+        android:paddingLeft="5dp"
+        android:paddingRight="5dp"
+        android:textColor="@color/task_name"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_item_time" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

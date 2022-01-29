@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">RAM</string>
+
+    <string name="contact_item_icon_desc">contact_item_icon</string>
+    <string name="form_add_to_list_button_desc">form_add_to_list_button</string>
+    <string name="task_item_has_list_desc">task_item_has_list</string>
+    <string name="task_item_has_contact_list_desc">task_item_has_contact_list</string>
+
+
+    <string name="main_activity_alert_title">"Отменить изменения?"</string>
+
+    <string name="main_list_to_deadlines">К Срокам</string>
+    <string name="main_list_to_meetings">К Встречам</string>
+
+    <string name="top_menu_title_add">Добавить </string>
+    <string name="top_menu_title_settings">Настройки</string>
+
+    <string name="bottom_menu_title_previous">Назад</string>
+    <string name="bottom_menu_title_today">Сегодня</string>
+    <string name="bottom_menu_title_next">Вперед</string>
+    <string name="bottom_menu_title_jump_to">Каледарь</string>
+
+    <string name="task_form_name_hint">Добавьте описание задачи</string>
+    <string name="task_form_add_contact_hint">Добавьте новый контакт</string>
+    <string name="task_form_add_item_hint">Добавьте новый элемент</string>
+    <string name="task_form_start_label">НАЧАЛО</string>
+    <string name="task_form_end_label">КОНЕЦ</string>
+    <string name="task_form_remind_button">Напомнить</string>
+    <string name="task_form_manage_label">Изменить?</string>
+    <string name="task_form_manage_done">Готово</string>
+    <string name="task_form_manage_no">Нет</string>
+    <string name="task_form_manage_contacts">Контакты</string>
+    <string name="task_form_manage_list">Список</string>
+    <string name="task_form_add_new_btn">Добавить</string>
+    <string name="task_form_update_all_btn">Обновить</string>
+    <string name="task_form_negative_toast_button">Отменить</string>
+    <string name="task_form_positive_toast_button">Исправить</string>
+    <string name="task_form_yes_toast_button">Да</string>
+    <string name="task_form_no_toast_button">Нет</string>
+    <string name="task_form_invalid_name_message">Добавьте описание задачи</string>
+    <string name="task_form_invalid_time_message">Начало позже конца</string>
+    <string name="task_form_invalid_task">Неверная задача</string>
+    <string name="task_form_invalid_time">Нет места</string>
+    <string name="task_form_priority_low">Низкий</string>>
+    <string name="task_form_priority_medium">Средний</string>>
+    <string name="task_form_priority_urgent">Высокий</string>>
+    <string name="task_form_type_deadline">Срок</string>>
+    <string name="task_form_type_meeting">Встреча</string>>
+    <string name="task_form_contact_phone">Телефон</string>>
+    <string name="task_form_contact_email">Почта</string>>
+    <string name="task_form_contact_other">Другое</string>
+    <string name="alarm_header_meeting">До начала встречи</string>
+    <string name="alarm_header_deadline">До конца срока</string>
+    <string name="alarm_day_label">Дни</string>
+    <string name="alarm_hour_label">Часы</string>
+    <string name="alarm_minute_label">Минуты</string>
+    <string name="alarm_deadline">закончится в</string>
+    <string name="alarm_meeting">начнется в</string>
+    <string name="alarm_notification_title">RAM напоминает</string>
+
+    <string name="date_time_picker_ok">Принять</string>
+    <string name="date_time_picker_cancel">Отменить</string>
+
+    <string name="settings_build_version">Версия сборки</string>
+    <string name="settings_date_time_format_category">Формат даты и времени</string>
+    <string name="settings_date_format">Дата</string>
+    <string name="settings_time_format">Время</string>
+
+
+    <string-array name="settings_date_format_entries">
+        <item>31/12/00</item>
+        <item>31 Декабря 2000</item>
+        <item>Вс 31 Дек 2000</item>
+    </string-array>
+    <string-array name="settings_date_format_values">
+        <item>dd/MM/yy</item>
+        <item>dd MMMM yyyy</item>
+        <item>EEE dd MMM yyyy</item>
+    </string-array>
+    <string-array name="settings_time_format_entries">
+        <item>23:00</item>
+        <item>11:00 PM</item>
+    </string-array>
+    <string-array name="settings_time_format_values">
+        <item>HH:mm</item>
+        <item>KK:mm a</item>
+    </string-array>
+
+</resources>

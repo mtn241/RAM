@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:background="@color/alert_dialog_background"
+    android:paddingTop="10dp"
+    android:paddingBottom="10dp">
+
+    <TextView
+        android:id="@+id/alarm_header"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Spinner
+        android:id="@+id/alarm_spinner_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="40dp"
+        android:entries="@array/alarm_spinner_days_entities"
+        android:popupBackground="@android:color/transparent"
+        app:layout_constraintEnd_toStartOf="@+id/alarm_spinner_hour"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_label_day" />
+
+    <Spinner
+        android:id="@+id/alarm_spinner_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="40dp"
+        android:entries="@array/alarm_spinner_minutes_entities"
+        android:popupBackground="@android:color/transparent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alarm_spinner_hour"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_label_minute" />
+
+    <Spinner
+        android:id="@+id/alarm_spinner_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:dropDownWidth="39dp"
+        android:entries="@array/alarm_spinner_hours_entities"
+        android:popupBackground="@android:color/transparent"
+        android:spinnerMode="dropdown"
+        app:layout_constraintEnd_toStartOf="@+id/alarm_spinner_minute"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/alarm_spinner_day"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_label_hour" />
+
+    <TextView
+        android:id="@+id/alarm_label_day"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_day_label"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_day"
+        app:layout_constraintStart_toStartOf="@+id/alarm_spinner_day"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_header" />
+
+    <TextView
+        android:id="@+id/alarm_label_hour"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_hour_label"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_hour"
+        app:layout_constraintStart_toEndOf="@+id/alarm_spinner_day"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_header" />
+
+    <TextView
+        android:id="@+id/alarm_label_minute"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/alarm_minute_label"
+        android:layout_marginTop="10dp"
+        android:textSize="17dp"
+        app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_minute"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_header" />
+
+    <TextView
+        android:id="@+id/alarm_btn_set"
+        style="@style/app_button_default_style"
+        android:text="@string/date_time_picker_ok"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toStartOf="@+id/alarm_btn_cancel"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_spinner_minute" />
+
+    <TextView
+        android:id="@+id/alarm_btn_cancel"
+        style="@style/app_button_default_style"
+        android:text="@string/date_time_picker_cancel"
+        android:textSize="15dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/alarm_spinner_minute" />
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,252 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/task_form_layout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".view.ui.TaskFormFragment"
+    android:focusableInTouchMode="true"
+    android:clickable="true"
+    android:focusable="true"
+    android:background="@color/form_fragment"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp"
+    >
+
+    <com.extendes.ram.view.ui.ClearFocusEditText
+        android:id="@+id/task_form_input_name"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/task_name"
+        android:padding="5dp"
+        android:hint="@string/task_form_name_hint"
+        android:inputType="text"
+        android:imeOptions="actionDone"
+        android:focusable="true"
+        android:focusableInTouchMode="true"
+        android:background="@drawable/task_form_input_background"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:fontFamily="@font/form_input_font"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:autofillHints="" />
+    <Spinner
+        android:id="@+id/task_form_spinner_priority"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:clickable="true"
+        android:focusable="true"
+        android:popupBackground="@android:color/transparent"
+        android:focusableInTouchMode="true"
+        android:padding="5dp"
+        android:layout_marginVertical="10dp"
+        app:layout_constraintStart_toEndOf="@+id/task_form_spinner_task_type"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_btn_end" />
+
+    <Spinner
+        android:id="@+id/task_form_spinner_task_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginVertical="10dp"
+        android:padding="5dp"
+        android:popupBackground="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_btn_start" />
+
+    <Spinner
+        android:id="@+id/task_form_spinner_contact_type"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:popupBackground="@android:color/transparent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_manage" />
+
+    <TextView
+        android:id="@+id/task_form_btn_start"
+        style="@style/app_button_default_style"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toStartOf="@+id/task_form_btn_end"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_start_label" />
+
+    <EditText
+        android:id="@+id/task_form_input_contact"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:background="@drawable/task_form_input_background"
+        android:padding="5dp"
+        android:hint="@string/task_form_add_contact_hint"
+        android:layout_marginVertical="5dp"
+        android:fontFamily="@font/form_input_font"
+        app:layout_constraintEnd_toStartOf="@+id/task_form_contact_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_spinner_contact_type"
+        android:autofillHints="" />
+
+
+    <TextView
+        android:id="@+id/task_form_btn_end"
+        style="@style/app_button_default_style"
+        android:textAlignment="center"
+        android:textSize="16dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/task_form_btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_end_label" />
+
+    <ImageView
+        android:id="@+id/task_form_contact_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_task_form_list_add"
+        app:layout_constraintBottom_toBottomOf="@+id/task_form_input_contact"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_form_input_contact"
+        android:contentDescription="@string/form_add_to_list_button_desc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_form_contact_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_input_contact" />
+
+    <TextView
+        android:id="@+id/task_form_start_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_form_start_label"
+        android:textSize="17dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/task_form_btn_start"
+        app:layout_constraintStart_toStartOf="@+id/task_form_btn_start"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_input_name" />
+
+    <ImageView
+        android:id="@+id/task_form_list_add"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:src="@drawable/ic_task_form_list_add"
+        app:layout_constraintBottom_toBottomOf="@+id/task_form_list_input"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/task_form_list_input"
+        android:contentDescription="@string/form_add_to_list_button_desc" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/task_form_list"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="5dp"
+        app:layout_constraintBottom_toTopOf="@+id/task_form_save_btn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_list_input" />
+
+    <TextView
+        android:id="@+id/task_form_end_label"
+        android:textSize="17dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/task_form_end_label"
+        android:layout_marginTop="5dp"
+        app:layout_constraintEnd_toEndOf="@+id/task_form_btn_end"
+        app:layout_constraintStart_toStartOf="@+id/task_form_btn_end"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_input_name" />
+
+    <RadioGroup
+        android:id="@+id/task_form_manage"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_manage_radio_label">
+
+        <RadioButton
+            style="@style/app_font_size_small"
+            android:id="@+id/task_form_manage_no"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/task_form_time"
+            android:text="@string/task_form_manage_no" />
+
+        <RadioButton
+            style="@style/app_font_size_small"
+            android:id="@+id/task_form_manage_contacts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/task_form_time"
+            android:text="@string/task_form_manage_contacts" />
+
+        <RadioButton
+            style="@style/app_font_size_small"
+            android:id="@+id/task_form_manage_list"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/task_form_time"
+            android:text="@string/task_form_manage_list"/>
+
+    </RadioGroup>
+
+    <EditText
+        android:id="@+id/task_form_list_input"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:inputType="text"
+        android:background="@drawable/task_form_input_background"
+        android:hint="@string/task_form_add_item_hint"
+        android:textColor="@color/task_name"
+        android:fontFamily="@font/form_input_font"
+        app:layout_constraintEnd_toStartOf="@+id/task_form_list_add"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_contact_list"
+        android:autofillHints="" />
+
+    <TextView
+        android:id="@+id/task_form_manage_radio_label"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="5dp"
+        android:textSize="17dp"
+        android:layout_marginTop="10dp"
+        android:text="@string/task_form_manage_label"
+        app:layout_constraintStart_toStartOf="@+id/task_form_manage"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_remind_btn" />
+
+    <TextView
+        style="@style/app_button_default_style"
+        android:id="@+id/task_form_save_btn"
+        android:layout_margin="10dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <TextView
+        android:id="@+id/task_form_alarm_message"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="5dp"
+        android:textSize="13dp"
+        app:layout_constraintBottom_toBottomOf="@+id/task_form_remind_btn"
+        app:layout_constraintStart_toEndOf="@+id/task_form_remind_btn"
+        app:layout_constraintTop_toTopOf="@+id/task_form_remind_btn" />
+
+    <TextView
+        android:id="@+id/task_form_remind_btn"
+        style="@style/app_button_default_style"
+        android:layout_marginStart="5dp"
+        android:layout_marginTop="5dp"
+        android:text="@string/task_form_remind_button"
+        android:textSize="15dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/task_form_spinner_priority" />
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

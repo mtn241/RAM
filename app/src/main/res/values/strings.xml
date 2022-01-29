@@ -1,0 +1,214 @@
+<resources>
+    <string name="app_name">RAM</string>
+
+    <string name="contact_item_icon_desc">contact_item_icon</string>
+    <string name="form_add_to_list_button_desc">form_add_to_list_button</string>
+    <string name="task_item_has_list_desc">task_item_has_list</string>
+    <string name="task_item_has_contact_list_desc">task_item_has_contact_list</string>
+
+    <string name="main_activity_alert_title">"Discard changes?"</string>
+
+    <string name="main_list_to_deadlines">To Deadlines</string>
+    <string name="main_list_to_meetings">To Meetings</string>
+
+    <string name="top_menu_title_add">Add task</string>
+    <string name="top_menu_title_settings">Settings</string>
+
+    <string name="bottom_menu_title_previous">Previous</string>
+    <string name="bottom_menu_title_today">Today</string>
+    <string name="bottom_menu_title_next">Next</string>
+    <string name="bottom_menu_title_jump_to">Jump to</string>
+
+
+    <string name="task_form_name_hint">Add task description</string>
+    <string name="task_form_add_contact_hint">Add new contact</string>
+    <string name="task_form_add_item_hint">Add new item</string>
+    <string name="task_form_start_label">START</string>
+    <string name="task_form_end_label">END</string>
+    <string name="task_form_remind_button">Remind</string>
+    <string name="task_form_manage_label">Edit?</string>
+    <string name="task_form_manage_done">Done</string>
+    <string name="task_form_manage_no">No</string>
+    <string name="task_form_manage_contacts">Contacts</string>
+    <string name="task_form_manage_list">List</string>
+    <string name="task_form_add_new_btn">Add</string>
+    <string name="task_form_update_all_btn">Update</string>
+    <string name="task_form_negative_toast_button">Discard</string>
+    <string name="task_form_positive_toast_button">Repair</string>
+    <string name="task_form_no_toast_button">No</string>
+    <string name="task_form_yes_toast_button">Yes</string>
+    <string name="task_form_invalid_name_message">Add task description</string>
+    <string name="task_form_invalid_time_message">Start must be less then end</string>
+    <string name="task_form_invalid_task">Invalid task</string>
+    <string name="task_form_invalid_time">No place</string>
+    <string name="task_form_priority_low">Lowest</string>>
+    <string name="task_form_priority_medium">Medium</string>>
+    <string name="task_form_priority_urgent">Urgent</string>>
+    <string name="task_form_type_deadline">Deadline</string>>
+    <string name="task_form_type_meeting">Meeting</string>>
+    <string name="task_form_contact_phone">Phone</string>>
+    <string name="task_form_contact_email">Email</string>>
+    <string name="task_form_contact_other">Other</string>
+    <string name="alarm_header_meeting">Before meeting starts</string>
+    <string name="alarm_header_deadline">Before deadline expires</string>
+    <string name="alarm_day_label">Days</string>
+    <string name="alarm_hour_label">Hours</string>
+    <string name="alarm_minute_label">Minutes</string>
+    <string name="alarm_deadline"> expires at</string>
+    <string name="alarm_meeting"> starts at</string>
+    <string name="alarm_notification_title">RAM reminds</string>
+
+    <string name="date_time_picker_ok">OK</string>
+    <string name="date_time_picker_cancel">Cancel</string>
+
+    <string name="settings_build_version">Build version</string>
+    <string name="settings_date_time_format_category">Date and time format</string>
+    <string name="settings_date_format">Date</string>
+    <string name="settings_time_format">Time</string>
+
+
+    <string-array name="settings_date_format_entries">
+        <item>31/12/00</item>
+        <item>31 December 2000</item>
+        <item>Sun 31 December 2000</item>
+    </string-array>
+    <string-array name="settings_date_format_values">
+        <item>dd/MM/yy</item>
+        <item>dd MMMM yyyy</item>
+        <item>EEE dd MMM yyyy</item>
+    </string-array>
+
+    <string-array name="settings_time_format_entries">
+        <item>23:00</item>
+        <item>11:00 PM</item>
+    </string-array>
+    <string-array name="settings_time_format_values">
+        <item>HH:mm</item>
+        <item>KK:mm a</item>
+    </string-array>
+
+    <string-array  name="alarm_spinner_minutes_entities">
+        <item>-</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+        <item>31</item>
+        <item>32</item>
+        <item>33</item>
+        <item>34</item>
+        <item>35</item>
+        <item>36</item>
+        <item>37</item>
+        <item>38</item>
+        <item>39</item>
+        <item>40</item>
+        <item>41</item>
+        <item>42</item>
+        <item>43</item>
+        <item>44</item>
+        <item>45</item>
+        <item>46</item>
+        <item>47</item>
+        <item>48</item>
+        <item>49</item>
+        <item>50</item>
+        <item>51</item>
+        <item>52</item>
+        <item>53</item>
+        <item>54</item>
+        <item>55</item>
+        <item>56</item>
+        <item>57</item>
+        <item>58</item>
+        <item>59</item>
+    </string-array>
+    <string-array name="alarm_spinner_hours_entities">
+        <item>-</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+    </string-array>
+    <string-array name="alarm_spinner_days_entities">
+        <item>-</item>
+        <item>0</item>
+        <item>1</item>
+        <item>2</item>
+        <item>3</item>
+        <item>4</item>
+        <item>5</item>
+        <item>6</item>
+        <item>7</item>
+        <item>8</item>
+        <item>9</item>
+        <item>10</item>
+        <item>11</item>
+        <item>12</item>
+        <item>13</item>
+        <item>14</item>
+        <item>15</item>
+        <item>16</item>
+        <item>17</item>
+        <item>18</item>
+        <item>19</item>
+        <item>20</item>
+        <item>21</item>
+        <item>22</item>
+        <item>23</item>
+        <item>24</item>
+        <item>25</item>
+        <item>26</item>
+        <item>27</item>
+        <item>28</item>
+        <item>29</item>
+        <item>30</item>
+    </string-array>
+</resources>
