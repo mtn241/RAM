@@ -12,6 +12,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="10dp"
+        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
@@ -57,7 +58,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alarm_day_label"
-        android:textSize="17dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_day"
         app:layout_constraintStart_toStartOf="@+id/alarm_spinner_day"
@@ -68,7 +68,6 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/alarm_hour_label"
-        android:textSize="17dp"
         android:layout_marginTop="10dp"
         app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_hour"
         app:layout_constraintStart_toEndOf="@+id/alarm_spinner_day"
@@ -80,7 +79,6 @@
         android:layout_height="wrap_content"
         android:text="@string/alarm_minute_label"
         android:layout_marginTop="10dp"
-        android:textSize="17dp"
         app:layout_constraintEnd_toEndOf="@+id/alarm_spinner_minute"
         app:layout_constraintTop_toBottomOf="@+id/alarm_header" />
 

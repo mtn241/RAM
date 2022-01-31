@@ -19,7 +19,8 @@ import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.res.ResourcesCompat
 import androidx.lifecycle.Observer
 import androidx.preference.PreferenceManager
-import com.extendes.ram.*
+import com.extendes.ram.App
+import com.extendes.ram.R
 import com.extendes.ram.viewmodel.handlers.AlertReceiver
 import com.extendes.ram.viewmodel.handlers.DateFormatHandler
 import com.extendes.ram.viewmodel.model.AlarmData
@@ -129,12 +130,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         else{
-            /*
-            if(!lastIs(list_fragment)){
-
-            }
-
-             */
             super.onBackPressed()
             this.finish()
         }
