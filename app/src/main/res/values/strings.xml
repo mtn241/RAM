@@ -1,10 +1,10 @@
 <resources>
-    <string name="app_name">RAM</string>
+    <string name="app_name" translatable="false">RAM</string>
 
-    <string name="contact_item_icon_desc">contact_item_icon</string>
-    <string name="form_add_to_list_button_desc">form_add_to_list_button</string>
-    <string name="task_item_has_list_desc">task_item_has_list</string>
-    <string name="task_item_has_contact_list_desc">task_item_has_contact_list</string>
+    <string name="contact_item_icon_desc" translatable="false">contact_item_icon</string>
+    <string name="form_add_to_list_button_desc" translatable="false">form_add_to_list_button</string>
+    <string name="task_item_has_list_desc" translatable="false">task_item_has_list</string>
+    <string name="task_item_has_contact_list_desc" translatable="false">task_item_has_contact_list</string>
 
     <string name="main_activity_alert_title">"Discard changes?"</string>
 

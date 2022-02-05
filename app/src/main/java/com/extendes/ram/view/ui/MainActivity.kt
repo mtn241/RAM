@@ -200,12 +200,16 @@ class MainActivity : AppCompatActivity() {
     private fun adjustFontScale(configuration: Configuration) {
         if (configuration.fontScale > 1.3) {
             configuration.fontScale = 1.30f
-            val metrics = resources.displayMetrics
-            this.windowManager.defaultDisplay.getMetrics(metrics)
-            metrics.scaledDensity = configuration.fontScale * metrics.density
-            resources.updateConfiguration(configuration, metrics)
         }
+        else if(configuration.fontScale < 1){
+            configuration.fontScale = 1.00f
+        }
+        val metrics = resources.displayMetrics
+        this.windowManager.defaultDisplay.getMetrics(metrics)
+        metrics.scaledDensity = configuration.fontScale * metrics.density
+        resources.updateConfiguration(configuration, metrics)
     }
+
     companion object{
         const val form_fragment:String="FormFragment"
         const val list_fragment:String="ListFragment"

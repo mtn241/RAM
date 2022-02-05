@@ -15,7 +15,7 @@
         android:paddingTop="2dp"
         android:paddingBottom="1dp"
         android:textColor="@color/task_name"
-        android:fontFamily="casual"
+        android:textDirection="locale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

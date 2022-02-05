@@ -7,10 +7,10 @@
 
     <TextView
         android:id="@+id/contact_spinner_item_text"
-        style="@style/app_font_size_small"
         android:layout_width="90dp"
         android:layout_height="wrap_content"
         android:padding="2dp"
+        android:textStyle="bold"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />

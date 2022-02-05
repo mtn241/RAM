@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="main_activity_alert_title">לבטל שינויים?</string>
+
+    <string name="main_list_to_deadlines">למועדים</string>
+    <string name="main_list_to_meetings">לפגישות</string>
+
+    <string name="top_menu_title_add">הוסף משימה </string>
+    <string name="top_menu_title_settings">הגדרות</string>
+
+    <string name="bottom_menu_title_previous">הקודם</string>
+    <string name="bottom_menu_title_today">היום</string>
+    <string name="bottom_menu_title_next">הבא</string>
+    <string name="bottom_menu_title_jump_to">לתאריך</string>
+
+
+    <string name="task_form_name_hint">הוסף תיאור משימה</string>
+    <string name="task_form_add_contact_hint">הוסף פרטי התקשרות</string>
+    <string name="task_form_add_item_hint">הוסף פריט חדש</string>
+    <string name="task_form_start_label">התחלה</string>
+    <string name="task_form_end_label">סוף</string>
+    <string name="task_form_remind_button">תזכורת</string>
+    <string name="task_form_manage_label">לערוך ?</string>
+    <string name="task_form_manage_done">בוצע</string>
+    <string name="task_form_manage_no">לא</string>
+    <string name="task_form_manage_contacts">אנשי קשר</string>
+    <string name="task_form_manage_list">רשימה</string>
+    <string name="task_form_add_new_btn">הוסף</string>
+    <string name="task_form_update_all_btn">עדכן</string>
+    <string name="task_form_negative_toast_button">ביטול</string>
+    <string name="task_form_positive_toast_button">תיקון</string>
+    <string name="task_form_no_toast_button">לא</string>
+    <string name="task_form_yes_toast_button">כן</string>
+    <string name="task_form_invalid_name_message">הוסף תיאור משימה</string>
+    <string name="task_form_invalid_time_message">התחלה צריכה להיות קטנה מסוף</string>
+    <string name="task_form_invalid_task">משימה לא חוקית</string>
+    <string name="task_form_invalid_time">אין מקום</string>
+    <string name="task_form_priority_low">נמוך</string>>
+    <string name="task_form_priority_medium">בינוני</string>>
+    <string name="task_form_priority_urgent">גבוה</string>>
+    <string name="task_form_type_deadline">מועד</string>>
+    <string name="task_form_type_meeting">פגישה</string>>
+    <string name="task_form_contact_phone">טלפון</string>>
+    <string name="task_form_contact_email">אימייל</string>>
+    <string name="task_form_contact_other">אחר</string>
+    <string name="alarm_header_meeting">לפני התחלת פגישה</string>
+    <string name="alarm_header_deadline">לפני פקיעת מועד</string>
+    <string name="alarm_day_label">ימים</string>
+    <string name="alarm_hour_label">שעות</string>
+    <string name="alarm_minute_label">דקות</string>
+    <string name="alarm_deadline">יפוג ב</string>
+    <string name="alarm_meeting"> מתחילה ב</string>
+    <string name="alarm_notification_title">תזכורת מRAM</string>
+
+    <string name="date_time_picker_ok">אישור</string>
+    <string name="date_time_picker_cancel">ביטול</string>
+
+    <string name="settings_build_version">גירסת Build</string>
+    <string name="settings_date_time_format_category">תאריך ושעה</string>
+    <string name="settings_date_format">תאריך</string>
+    <string name="settings_time_format">שעה</string>
+
+
+    <string-array name="settings_date_format_entries">
+        <item>31/12/00</item>
+        <item>31 דצמבר 2000</item>
+        <item>"יום א' 31 דצמ' 2000"</item>
+    </string-array>
+    <string-array name="settings_date_format_values">
+        <item>dd/MM/yy</item>
+        <item>dd MMMM yyyy</item>
+        <item>EEE dd MMM yyyy</item>
+    </string-array>
+
+    <string-array name="settings_time_format_entries">
+        <item>23:00</item>
+        <item>11:00 PM</item>
+    </string-array>
+    <string-array name="settings_time_format_values">
+        <item>HH:mm</item>
+        <item>KK:mm a</item>
+    </string-array>
+</resources>

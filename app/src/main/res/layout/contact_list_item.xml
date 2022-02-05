@@ -23,7 +23,7 @@
         android:paddingEnd="23dp"
         android:paddingTop="2dp"
         android:paddingBottom="1dp"
-        android:fontFamily="casual"
+        android:textDirection="locale"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toStartOf="@+id/contact_type_icon"
         app:layout_constraintStart_toStartOf="parent"

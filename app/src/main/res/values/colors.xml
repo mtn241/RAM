@@ -19,4 +19,5 @@
     <color name="form_fragment">#C1CFC0</color>
     <color name="contact_icon_color">#FFFFFF</color>
     <color name="form_wrong_input">#FF0000</color>>
+    <color name="task_item_name_color">#f6eee3</color>
 </resources>

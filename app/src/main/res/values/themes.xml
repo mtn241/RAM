@@ -5,9 +5,9 @@
         <item name="colorPrimary">@color/task_form_time</item>
         <item name="colorPrimaryVariant">@color/purple_700</item>
         <item name="colorOnPrimary">@color/white</item>
-        <item name="android:textSize">14dp</item>
+        <item name="android:textSize">14sp</item>
         <item name="android:textColor">@color/task_form_time</item>
-        <item name="android:fontFamily">@font/default_app_font</item>
+
         <item name="spinnerDropDownItemStyle">@style/spinner_time_style</item>
         <item name="android:spinnerItemStyle">@style/spinner_time_picked_style</item>
         <!-- Secondary brand color. -->

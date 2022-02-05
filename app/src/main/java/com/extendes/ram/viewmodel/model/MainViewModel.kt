@@ -244,7 +244,7 @@ class MainViewModel :ViewModel() {
     }//
     fun timeToMainList(input: TaskWithList):String{
         return when(input.parent.task_type){
-            TaskTypes.Deadline->formatHandler.dateToString(dateManager.longToDate(input.parent.task_end))+" "+formatHandler.timeToString(dateManager.longToDate(input.parent.task_end))+" "
+            TaskTypes.Deadline->formatHandler.dateToString(dateManager.longToDate(input.parent.task_end))+"\n"+formatHandler.timeToString(dateManager.longToDate(input.parent.task_end))+" "
             TaskTypes.Meeting->formatHandler.timeToString(dateManager.longToDate(input.parent.task_start))+" - "+formatHandler.timeToString(dateManager.longToDate(input.parent.task_end))+" "
         }
     }//injected to Main List adapter for proper time/date display based on TaskType of list item

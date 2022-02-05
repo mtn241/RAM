@@ -101,13 +101,13 @@ class TaskEntityHandler(private var loadedParent: TaskEntity): TaskEntityHandler
         setPlaceholderStatus(placeholder, status)
         updateEntityChanged(status)
     }
-    private fun validateName():String{
+    private fun validateName():Int{
         if(RegexHelper.isNotBlank(updatedParent.task_name)){
             return validEntity
         }
         return ErrorTypes.Name.message
     }
-    private fun validateTime():String{
+    private fun validateTime():Int{
         if(updatedParent.task_start<updatedParent.task_end){
             return validEntity
         }
@@ -126,10 +126,10 @@ class TaskEntityHandler(private var loadedParent: TaskEntity): TaskEntityHandler
         onResetEntity()
     }
     override fun getParentErrorMessage(): String {
-        var message= validEntity
+        var message=""
         ErrorTypes.values().forEach {
-            if(errorList[it]!=""){
-                message+="${errorList[it]}\n"
+            if(errorList[it]!=-1){
+                message+="${errorList[it]?.let { it1 -> App.instance.getString(it1) }}\n"
             }
         }
         return message
@@ -216,13 +216,13 @@ class TaskEntityHandler(private var loadedParent: TaskEntity): TaskEntityHandler
     }
 
     companion object{
-        enum class ErrorTypes(val message:String){
-            Name(App.instance.getString(R.string.task_form_invalid_name_message)),
-            Time(App.instance.getString(R.string.task_form_invalid_time_message))
+        enum class ErrorTypes( val message:Int/*val message:String*/){
+            Name(R.string.task_form_invalid_name_message),
+            Time(R.string.task_form_invalid_time_message)
         }
         enum class EntityPlaceholders{
             Name,Start,End,PriorityType,TaskType,Alarm
         }
-        const val validEntity:String=""
+        const val validEntity:Int=-1
     }
 }

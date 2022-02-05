@@ -23,7 +23,6 @@
         android:padding="5dp"
         android:hint="@string/task_form_name_hint"
         android:inputType="text"
-        android:fontFamily="casual"
         android:imeOptions="actionDone"
         android:focusable="true"
         android:focusableInTouchMode="true"
@@ -68,7 +67,7 @@
         android:id="@+id/task_form_btn_start"
         style="@style/app_button_default_style"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:maxWidth="130dp"
         app:layout_constraintEnd_toStartOf="@+id/task_form_btn_end"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent"
@@ -81,8 +80,8 @@
         android:background="@drawable/task_form_input_background"
         android:padding="5dp"
         android:hint="@string/task_form_add_contact_hint"
+        android:inputType="text"
         android:layout_marginVertical="5dp"
-        android:fontFamily="casual"
         app:layout_constraintEnd_toStartOf="@+id/task_form_contact_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_form_spinner_contact_type"
@@ -93,7 +92,7 @@
         android:id="@+id/task_form_btn_end"
         style="@style/app_button_default_style"
         android:textAlignment="center"
-        android:textSize="16dp"
+        android:maxWidth="130dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toEndOf="@+id/task_form_btn_start"
@@ -123,7 +122,8 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/task_form_start_label"
-        android:textSize="17dp"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@+id/task_form_btn_start"
         app:layout_constraintStart_toStartOf="@+id/task_form_btn_start"
@@ -151,10 +151,11 @@
 
     <TextView
         android:id="@+id/task_form_end_label"
-        android:textSize="17dp"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/task_form_end_label"
+        android:textSize="15sp"
+        android:textStyle="bold"
         android:layout_marginTop="5dp"
         app:layout_constraintEnd_toEndOf="@+id/task_form_btn_end"
         app:layout_constraintStart_toStartOf="@+id/task_form_btn_end"
@@ -169,27 +170,32 @@
         app:layout_constraintTop_toBottomOf="@+id/task_form_manage_radio_label">
 
         <RadioButton
-            style="@style/app_font_size_small"
             android:id="@+id/task_form_manage_no"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/task_form_time"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:text="@string/task_form_manage_no" />
 
         <RadioButton
-            style="@style/app_font_size_small"
+
             android:id="@+id/task_form_manage_contacts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/task_form_time"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:text="@string/task_form_manage_contacts" />
 
         <RadioButton
-            style="@style/app_font_size_small"
+
             android:id="@+id/task_form_manage_list"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textColor="@color/task_form_time"
+            android:textSize="13sp"
+            android:textStyle="bold"
             android:text="@string/task_form_manage_list"/>
 
     </RadioGroup>
@@ -203,7 +209,6 @@
         android:background="@drawable/task_form_input_background"
         android:hint="@string/task_form_add_item_hint"
         android:textColor="@color/task_name"
-        android:fontFamily="casual"
         app:layout_constraintEnd_toStartOf="@+id/task_form_list_add"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_form_contact_list"
@@ -214,9 +219,10 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:padding="5dp"
-        android:textSize="17dp"
         android:layout_marginTop="10dp"
         android:text="@string/task_form_manage_label"
+        android:textSize="15sp"
+        android:textStyle="bold"
         app:layout_constraintStart_toStartOf="@+id/task_form_manage"
         app:layout_constraintTop_toBottomOf="@+id/task_form_remind_btn" />
 
@@ -232,8 +238,9 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
-
-        app:layout_constraintBottom_toBottomOf="@+id/task_form_remind_btn"
+        android:padding="5dp"
+        android:maxWidth="150dp"
+        app:layout_constraintBottom_toTopOf="@+id/task_form_manage_radio_label"
         app:layout_constraintStart_toEndOf="@+id/task_form_remind_btn"
         app:layout_constraintTop_toTopOf="@+id/task_form_remind_btn" />
 
@@ -243,7 +250,6 @@
         android:layout_marginStart="5dp"
         android:layout_marginTop="5dp"
         android:text="@string/task_form_remind_button"
-        android:textSize="15dp"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/task_form_spinner_priority" />
 
