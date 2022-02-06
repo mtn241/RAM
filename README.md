@@ -13,6 +13,6 @@ Each task can have contact list and simple list.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152688319-b0975fd0-042e-4b89-9d57-32255b854f00.png" width="40%">
 ### Screens
 **Main list** displays list of tasks for current date and task type. Each item shows task description, time, and icon for additional data. Bottom menu allows to traverse dates.<br/>
-**Task form** allows to add new task or modify existing. Aditionally it allows acess to additional data attached to task<br/>
+**Task form** allows to add new task or modify existing. Aditionally it allows access to additional data attached to task.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152689283-53fd3807-cc52-4123-82a0-7eeac91f438e.png" width="40%">
 <img src="https://user-images.githubusercontent.com/98648558/152689298-e8ea7bdb-a8d3-47ce-a6d8-ded5dce5409d.png" width="40%">
