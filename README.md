@@ -17,4 +17,4 @@ Each task can have contact list and simple list.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152689283-53fd3807-cc52-4123-82a0-7eeac91f438e.png" width="40%">
 <img src="https://user-images.githubusercontent.com/98648558/152689298-e8ea7bdb-a8d3-47ce-a6d8-ded5dce5409d.png" width="40%">
 ### Language support
-Fully supports English, Hebrew, Russian. Layouts support left to right and right to left text direction
+Fully supports English, Hebrew, Russian. Layouts support left to right and right to left text direction.
