@@ -8,7 +8,7 @@ RAM is a simple daily task manager created for learning purpose only. Allows to 
 ### Additional data
 Each task can have contact list and simple list.<br/> 
 **Simple list** allows to store any text item user sees fit. It can be grocery list, not to forget list, list of attendees and so on. <br/>
-**Contact list** stores contact items only. Each item belong to one of three categories: email, phone, other.<br/>
+**Contact list** stores contact items only. Each item belongs to one of three categories: email, phone, other.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152688330-36db5a30-f972-48ea-87d6-320d965dd8b6.png" width="40%">
 <img src="https://user-images.githubusercontent.com/98648558/152688319-b0975fd0-042e-4b89-9d57-32255b854f00.png" width="40%">
 ### Screens
