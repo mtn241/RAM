@@ -9,8 +9,8 @@ import android.content.Intent
 import androidx.core.app.NotificationCompat
 import androidx.core.app.NotificationManagerCompat
 import com.extendes.ram.App
-import com.extendes.ram.view.ui.MainActivity
 import com.extendes.ram.R
+import com.extendes.ram.view.ui.MainActivity
 
 class AlertReceiver:BroadcastReceiver() {
     private val notificationManager=NotificationManagerCompat.from(App.instance)
@@ -26,6 +26,8 @@ class AlertReceiver:BroadcastReceiver() {
                 setContentIntent(pending).
                 setPriority(NotificationCompat.PRIORITY_DEFAULT).
                 setColor(intent.extras!!.getInt("color", R.color.design_default_color_error)).
+                    setStyle(NotificationCompat.BigTextStyle()
+                        .bigText(intent.extras?.getString("message"))).
                 setContentTitle(context.resources.getString(R.string.alarm_notification_title)).setContentText(intent.extras?.getString("message")).setDefaults(Notification.DEFAULT_SOUND).build()
                 notificationManager.notify(1,notification)
             }
