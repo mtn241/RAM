@@ -16,3 +16,5 @@ Each task can have contact list and simple list.<br/>
 **Task form** allows to add new task or modify existing. Aditionally it allows access to additional data attached to task.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152689283-53fd3807-cc52-4123-82a0-7eeac91f438e.png" width="40%">
 <img src="https://user-images.githubusercontent.com/98648558/152689298-e8ea7bdb-a8d3-47ce-a6d8-ded5dce5409d.png" width="40%">
+###Language support
+Fully support English, Hebrew, Rusian. Layouts support left to rigth and rigth to left text direction
