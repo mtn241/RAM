@@ -239,7 +239,7 @@
         android:layout_height="wrap_content"
         android:layout_marginStart="5dp"
         android:padding="5dp"
-        android:maxWidth="150dp"
+        android:maxWidth="180dp"
         app:layout_constraintBottom_toTopOf="@+id/task_form_manage_radio_label"
         app:layout_constraintStart_toEndOf="@+id/task_form_remind_btn"
         app:layout_constraintTop_toTopOf="@+id/task_form_remind_btn" />

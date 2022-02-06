@@ -4,6 +4,7 @@
     <string name="contact_item_icon_desc" translatable="false">contact_item_icon</string>
     <string name="form_add_to_list_button_desc" translatable="false">form_add_to_list_button</string>
     <string name="task_item_has_list_desc" translatable="false">task_item_has_list</string>
+    <string name="task_item_has_alarm_desc" translatable="false">task_item_has_alarm</string>
     <string name="task_item_has_contact_list_desc" translatable="false">task_item_has_contact_list</string>
 
     <string name="main_activity_alert_title">"Discard changes?"</string>

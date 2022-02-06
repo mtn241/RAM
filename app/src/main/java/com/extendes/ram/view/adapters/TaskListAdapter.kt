@@ -5,9 +5,9 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
-import com.extendes.ram.view.ui.MainActivity
 import com.extendes.ram.R
 import com.extendes.ram.database.TaskWithList
+import com.extendes.ram.view.ui.MainActivity
 import kotlinx.android.synthetic.main.task_item.view.*
 import kotlin.reflect.KProperty
 
@@ -44,6 +44,7 @@ class TaskListAdapter (
             task_item_name.text=taskList[position].parent.task_name
             task_item_time.text=resolveTime(taskList[position])
             task_item_name.paintFlags = Paint.UNDERLINE_TEXT_FLAG
+            task_item_alarm_icon.visibility=if(taskList[position].parent.task_alarm==null)View.GONE else View.VISIBLE
             task_item_contacts_icon.visibility=if(taskList[position].contact_list.isEmpty())View.GONE else View.VISIBLE
             task_item_list_icon.visibility=if(taskList[position].list.isEmpty())View.GONE else View.VISIBLE
         }
