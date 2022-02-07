@@ -36,6 +36,7 @@ interface TaskHandlerInterface{
     fun removeFromContactListAt(position: Int)
     fun insertToContactListAt(contact: ContactListItem):Int
     fun resolveInputToContact(value:String,contactType: ContactTypes): ContactListItem?
+    fun getContactAt(position: Int):ContactListItem
 
 
     fun notifyOnListsChanges():Boolean
@@ -163,7 +164,9 @@ class TaskHandler(/*private var */loadedTask: TaskWithList): TaskHandlerInterfac
         return contactListHandler.createContactItem(entityHandler.getId(),value,contactType)
     }
 
-
+    override fun getContactAt(position: Int): ContactListItem {
+        return contactListHandler.getContactAt(position)
+    }
 
     override fun timeChanged(): Boolean {
        return entityHandler.timeChanged()

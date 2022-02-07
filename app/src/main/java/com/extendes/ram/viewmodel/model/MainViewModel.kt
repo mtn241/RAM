@@ -2,6 +2,8 @@ package com.extendes.ram.viewmodel.model
 
 
 
+import android.content.Intent
+import android.net.Uri
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
@@ -28,6 +30,7 @@ class MainViewModel :ViewModel() {
     private val actionOnMainList=MutableLiveData(EventOnList(ActionOnList.NONE,0))//event to MainList adapter
     private val toForm=MutableLiveData(false)//notifies when to remove/add TaskFormFragment
     private val alarmLive=MutableLiveData<AlarmData>()//cancels/ adds alarm in main activity
+    private val contactLiveEvent=MutableLiveData<ContactEvent>()
     init {
         loadMainList()
         taskHandler= TaskHandler(getDefaultEntity())
@@ -181,10 +184,10 @@ class MainViewModel :ViewModel() {
     }
     fun getFormStart():Date{
         return dateManager.longToDate(taskHandler.getStart())
-    }
+    }//for datePicker
     fun getFormStartText():String{
         return getFormTimeText(dateManager.longToDate(taskHandler.getStart()))
-    }
+    } //for start button text
     fun setFormStart(date:Date){
         taskHandler.setStart(dateManager.dateToLong(dateManager.trimSeconds(date)))
     }
@@ -283,6 +286,20 @@ class MainViewModel :ViewModel() {
             viewModelScope.launch(Dispatchers.IO) {  repository.insertTaskContactListItem(newItem)}
         }
         return taskHandler.insertToContactListAt(newItem)
+    }
+    fun onContactItemClick(position: Int){
+        val event=packToContactEvent(taskHandler.getContactAt(position))
+        event?.let {
+            contactLiveEvent.value=it
+        }
+    }
+    fun getContactEventLive():LiveData<ContactEvent> = contactLiveEvent
+    private fun packToContactEvent(contact:ContactListItem):ContactEvent?{
+        return when(contact.contact_type){
+            ContactTypes.MAIL->ContactEvent(Intent.ACTION_SENDTO, Uri.parse("mailto:"+contact.contact_item) )
+            ContactTypes.PHONE->ContactEvent(Intent.ACTION_DIAL,Uri.parse("tel:"+contact.contact_item))
+            else->null
+        }
     }
 
     //task level
@@ -392,6 +409,7 @@ class MainViewModel :ViewModel() {
             DELETE,
 
         }
-        data class EventOnList(val action: ActionOnList, val position:Int)
+        data class EventOnList(var action: ActionOnList, var position:Int)
+        data class ContactEvent(val action:String,val data:Uri)
     }
 }

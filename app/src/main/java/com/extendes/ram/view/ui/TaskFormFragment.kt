@@ -16,14 +16,14 @@ import androidx.lifecycle.Observer
 import androidx.recyclerview.widget.ItemTouchHelper
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
-import com.extendes.ram.viewmodel.model.MainViewModel
 import com.extendes.ram.R
-import com.extendes.ram.view.adapters.*
 import com.extendes.ram.database.ContactTypes
 import com.extendes.ram.database.PriorityTypes
 import com.extendes.ram.database.TaskTypes
 import com.extendes.ram.database.TaskWithList
+import com.extendes.ram.view.adapters.*
 import com.extendes.ram.viewmodel.handlers.TaskHandler
+import com.extendes.ram.viewmodel.model.MainViewModel
 import kotlinx.android.synthetic.main.date_time_picker.*
 import kotlinx.android.synthetic.main.date_time_picker.view.*
 import kotlinx.android.synthetic.main.error_alert_dialog.*
@@ -33,7 +33,7 @@ import java.text.SimpleDateFormat
 import java.util.*
 
 
-class TaskFormFragment : Fragment() {
+class TaskFormFragment : Fragment() ,ContactListAdapter.OnContactClickListener{
 
     private val parentModel: MainViewModel by  activityViewModels()
     private lateinit var dateTimeView:View
@@ -60,8 +60,9 @@ class TaskFormFragment : Fragment() {
         errorDialog.setView(errorView)
     }
 
-
-
+    override fun onContactClick(position: Int) {
+        parentModel.onContactItemClick(position)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -75,7 +76,7 @@ class TaskFormFragment : Fragment() {
         task_form_spinner_priority.adapter= PrioritySpinnerAdapter(requireContext())
         task_form_spinner_task_type.adapter= TaskTypeSpinner(requireContext())
         task_form_spinner_contact_type.adapter= ContactSpinnerAdapter(requireContext())
-        adapterContacts= ContactListAdapter(parentModel.getFormContactList())
+        adapterContacts= ContactListAdapter(parentModel.getFormContactList(),this)
         task_form_contact_list.adapter=adapterContacts
         task_form_contact_list.layoutManager= LinearLayoutManager(context)
         val contactsObserver=object : RecyclerView.AdapterDataObserver() {

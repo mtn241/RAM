@@ -11,6 +11,7 @@ interface  TaskFormListInterface{
     fun reloadList(newList:MutableList<ListItem>)
     fun attachToId(id:Long)
     fun listChanged():Boolean
+
 }
 class TaskFormList (private var loadedList:MutableList<ListItem>): TaskFormListInterface {
     private var isEmptyOnLoad:Boolean=loadedList.isEmpty()
@@ -58,6 +59,8 @@ class TaskFormList (private var loadedList:MutableList<ListItem>): TaskFormListI
             }
         }
     }
+
+
     override fun listChanged(): Boolean {
         return onListChanged
     }

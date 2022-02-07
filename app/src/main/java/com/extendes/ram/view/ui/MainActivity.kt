@@ -76,6 +76,7 @@ class MainActivity : AppCompatActivity() {
         }
         preferences.registerOnSharedPreferenceChangeListener(preferencesListener)
 
+
         val toFormObserver=Observer<Boolean>{
             if(it){
                 if(!lastIs(form_fragment)){
@@ -92,6 +93,12 @@ class MainActivity : AppCompatActivity() {
         }
         viewModel.toFormLive().observe(this,toFormObserver)
 
+        val contactEventObserver=Observer<MainViewModel.Companion.ContactEvent>{
+            val intent=Intent(it.action)
+            intent.data = it.data
+            startActivity(intent)
+        }
+        viewModel.getContactEventLive().observe(this,contactEventObserver)
 
 
 

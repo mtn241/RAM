@@ -12,6 +12,7 @@ interface TaskFormContactListInterface{
     fun createContactItem(parentId:Long,value: String, contactType: ContactTypes): ContactListItem?
     fun attachToId(id:Long)
     fun contactListChanged():Boolean
+    fun getContactAt(position:Int):ContactListItem
 }
 
 class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
@@ -75,5 +76,9 @@ class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
                 parent_id=id
             }
         }
+    }
+
+    override fun getContactAt(position: Int): ContactListItem {
+        return loadedList[position]
     }
 }
