@@ -1,5 +1,8 @@
 # RAM
 RAM is a simple daily task manager created for learning purpose only. Allows to store tasks with additional data and display them as list.
+### Requirements
+Minimum Android SDK version: 23<br/>
+Maximum Android SDK version: 31
 ## Description
 ### Task types
 **Meeting** creates time interval from its start till end where user is busy. Meetings cannot overlap each other. Meeting displays its start and end. Notifications notify before meeting starts.<br/>
@@ -18,3 +21,4 @@ Each task can have contact list and simple list.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152689298-e8ea7bdb-a8d3-47ce-a6d8-ded5dce5409d.png" width="40%">
 ### Language support
 Fully supports English, Hebrew, Russian. Layouts support left to right and right to left text direction.
+
