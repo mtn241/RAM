@@ -7,7 +7,7 @@ RAM is a simple daily task manager created for learning purpose only. Allows to 
 - No permissions required
 ### Task types
 **Meeting** creates time interval from its start till end where user is busy. Meetings cannot overlap each other. Meeting displays its start and end. Notifications notify before meeting starts.<br/>
-**Deadline** is a task that should de done till its end. Unlike meeting, deadlines do not specify how much time allocated for task and therefore can overlap each other. Good example for deadline is "Pay bills till end of month". Deadline displays its end only. Notifications notify before deadline expires. <br/>
+**Deadline** is a task that should de done till its end. Unlike meeting, deadlines do not specify how much time allocated for task and therefore can overlap each other. Good example for deadline is "Finish project". Deadline displays its end only. Notifications notify before deadline expires. <br/>
 **Task type can not be changed in existind task!**
 ### Additional data
 Each task can have contact list and simple list.<br/> 
