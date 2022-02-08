@@ -22,5 +22,7 @@ Each task can have contact list and simple list.<br/>
 <img src="https://user-images.githubusercontent.com/98648558/152689298-e8ea7bdb-a8d3-47ce-a6d8-ded5dce5409d.png" width="40%">
 ### Language support
 Fully supports English, Hebrew, Russian. Layouts support left to right and right to left text direction.
+### App structure 
+RAM UI has one activity that hosts one of two fragments. All views share one ViewModel. ViewModel implemented as facade for multipale subsystem classes (like DateHandler, Repositary, TaskHandler). Each subsystem class depends on its own interface only. 
 
 
