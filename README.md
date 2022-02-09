@@ -1,5 +1,5 @@
 # RAM
-RAM is a simple daily task manager created for learning purpose only. Allows to store tasks with additional data and display them as list.
+RAM is a simple daily tasks manager created for learning purpose only. Allows to store tasks with additional data and display them as list.
 ## Description
 ### Requirements
 - Minimum Android SDK version: 23
