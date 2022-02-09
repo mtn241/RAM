@@ -4,19 +4,13 @@ import com.extendes.ram.database.ContactListItem
 import com.extendes.ram.database.ContactTypes
 
 
-interface TaskFormContactListInterface{
-    fun reloadContactList (newList: MutableList<ContactListItem>)
-    fun getContactList():MutableList<ContactListItem>
-    fun removeFromContactListAt(position: Int)
-    fun insertToContactListAt(contact: ContactListItem):Int
-    fun createContactItem(parentId:Long,value: String, contactType: ContactTypes): ContactListItem?
-    fun attachToId(id:Long)
-    fun contactListChanged():Boolean
-    fun getContactAt(position:Int):ContactListItem
-}
 
+
+abstract class TaskFormContactListInterface:TaskListInterface<ContactListItem>{
+    abstract fun createContactItem(parentId:Long, value: String, contactType: ContactTypes):ContactListItem?
+}
 class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
-    TaskFormContactListInterface {
+    TaskFormContactListInterface(){
     private var isEmptyOnLoad:Boolean=loadedList.isEmpty()
     private var onContactListChanged:Boolean=false
     init {
@@ -38,21 +32,21 @@ class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
         }
     }
 
-    override fun reloadContactList(newList: MutableList<ContactListItem>) {
+    override fun reloadList(newList: MutableList<ContactListItem>) {
         loadedList=newList
         resetToDefault()
     }
 
-    override fun getContactList(): MutableList<ContactListItem> {
+    override fun getList(): MutableList<ContactListItem> {
         return loadedList
     }
 
-    override fun removeFromContactListAt(position: Int) {
+    override fun removeFromListAt(position: Int) {
         loadedList.removeAt(position)
         updateOnListChanged()
     }
 
-    override fun insertToContactListAt(contact: ContactListItem): Int {
+    override fun insertToListAt(contact: ContactListItem): Int {
         loadedList.add(contact)
         updateOnListChanged()
         return loadedList.size-1
@@ -66,7 +60,7 @@ class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
         }
     }
 
-    override fun contactListChanged(): Boolean {
+    override fun listChanged(): Boolean {
         return onContactListChanged
     }
 
@@ -77,8 +71,7 @@ class TaskFormContactList(private var loadedList:MutableList<ContactListItem>):
             }
         }
     }
-
-    override fun getContactAt(position: Int): ContactListItem {
+    override fun getItemAt(position: Int): ContactListItem {
         return loadedList[position]
     }
 }

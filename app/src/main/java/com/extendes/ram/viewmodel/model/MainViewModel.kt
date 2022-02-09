@@ -257,7 +257,7 @@ class MainViewModel :ViewModel() {
         return taskHandler.getList()
     }
     fun removeFromFormList(position: Int){
-        val itemDeleted=taskHandler.getList()[position]
+        val itemDeleted=taskHandler.getItemAt(position)
         if(!taskHandler.isNewTask()){
             viewModelScope.launch(Dispatchers.IO) { repository.deleteListItem(itemDeleted)}
         }
@@ -333,6 +333,7 @@ class MainViewModel :ViewModel() {
     }
     fun setNewAsManaged(){
         setManagedTask()
+        goToForm()//temp
     }
 
     //main list

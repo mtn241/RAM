@@ -1,19 +1,14 @@
 package com.extendes.ram.viewmodel.handlers
 
+
 import com.extendes.ram.database.ListItem
 
 
-interface  TaskFormListInterface{
-    fun getList():MutableList<ListItem>
+interface ResolveItem{
     fun packToListItem(value:String,parentId:Long): ListItem?
-    fun removeFromListAt(position: Int)
-    fun insertToListAt(newItem: ListItem):Int
-    fun reloadList(newList:MutableList<ListItem>)
-    fun attachToId(id:Long)
-    fun listChanged():Boolean
-
 }
-class TaskFormList (private var loadedList:MutableList<ListItem>): TaskFormListInterface {
+abstract class TaskFormListInterface: ResolveItem,TaskListInterface<ListItem>
+class TaskFormList (private var loadedList:MutableList<ListItem>): TaskFormListInterface() {
     private var isEmptyOnLoad:Boolean=loadedList.isEmpty()
     private var onListChanged:Boolean=false
     init {
@@ -59,7 +54,9 @@ class TaskFormList (private var loadedList:MutableList<ListItem>): TaskFormListI
             }
         }
     }
-
+    override fun getItemAt(position: Int): ListItem {
+        return loadedList[position]
+    }
 
     override fun listChanged(): Boolean {
         return onListChanged

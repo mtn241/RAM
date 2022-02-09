@@ -30,7 +30,7 @@ interface TaskHandlerInterface{
     fun packToListItem(value:String): ListItem?
     fun removeFromListAt(position: Int)
     fun insertToListAt(value: ListItem):Int
-
+    fun getItemAt(position: Int):ListItem
 
     fun getContactList():MutableList<ContactListItem>
     fun removeFromContactListAt(position: Int)
@@ -70,7 +70,7 @@ class TaskHandler(/*private var */loadedTask: TaskWithList): TaskHandlerInterfac
     override fun reloadTaskData(task: TaskWithList) {
         entityHandler.resetManagedEntity(task.parent)
         listHandler.reloadList(task.list)
-        contactListHandler.reloadContactList(task.contact_list)
+        contactListHandler.reloadList(task.contact_list)
         loadedTaskLive.value=task
     }
 
@@ -146,18 +146,21 @@ class TaskHandler(/*private var */loadedTask: TaskWithList): TaskHandlerInterfac
          return listHandler.insertToListAt(value)
     }
 
+    override fun getItemAt(position: Int): ListItem {
+        return listHandler.getItemAt(position)
+    }
 
     override fun getContactList(): MutableList<ContactListItem> {
-        return contactListHandler.getContactList()
+        return contactListHandler.getList()
     }
 
 
     override fun removeFromContactListAt(position: Int) {
-        contactListHandler.removeFromContactListAt(position)
+        contactListHandler.removeFromListAt(position)
     }
 
     override fun insertToContactListAt(contact: ContactListItem): Int {
-        return contactListHandler.insertToContactListAt(contact)
+        return contactListHandler.insertToListAt(contact)
     }
 
     override fun resolveInputToContact(value: String, contactType: ContactTypes): ContactListItem? {
@@ -165,7 +168,7 @@ class TaskHandler(/*private var */loadedTask: TaskWithList): TaskHandlerInterfac
     }
 
     override fun getContactAt(position: Int): ContactListItem {
-        return contactListHandler.getContactAt(position)
+        return contactListHandler.getItemAt(position)
     }
 
     override fun timeChanged(): Boolean {
@@ -190,7 +193,7 @@ class TaskHandler(/*private var */loadedTask: TaskWithList): TaskHandlerInterfac
         return entityHandler.entityChangedLive()
     }
     override fun notifyOnListsChanges(): Boolean {
-        return listHandler.listChanged()||contactListHandler.contactListChanged()
+        return listHandler.listChanged()||contactListHandler.listChanged()
     }
     override fun attachAllToId(id: Long) {
         entityHandler.setId(id)

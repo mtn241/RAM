@@ -87,7 +87,6 @@ class MainActivity : AppCompatActivity() {
             else{
                 if(lastIs(form_fragment)){
                     supportFragmentManager.popBackStack()
-
                 }
             }
         }
@@ -99,8 +98,6 @@ class MainActivity : AppCompatActivity() {
             startActivity(intent)
         }
         viewModel.getContactEventLive().observe(this,contactEventObserver)
-
-
 
         val alarmObserver= Observer<AlarmData> {
             val alarm=this.getSystemService(Context.ALARM_SERVICE) as AlarmManager
@@ -123,9 +120,6 @@ class MainActivity : AppCompatActivity() {
         super.onNewIntent(intent)
         runIfWakeOnTask(intent)
     }
-
-
-
     override fun onBackPressed() {
         if(lastIs(form_fragment)){
             viewModel.onFormListChanged()
@@ -141,8 +135,6 @@ class MainActivity : AppCompatActivity() {
             this.finish()
         }
     }
-
-
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         menuInflater.inflate(R.menu.top_menu,menu)
         return true
@@ -151,10 +143,6 @@ class MainActivity : AppCompatActivity() {
         when(item.itemId){
               R.id.top_menu_add ->{
                   viewModel.setNewAsManaged()
-                  if(!lastIs(form_fragment)){
-                      setFragment ( form_fragment)
-                  }
-
               }
               R.id.top_menu_settings ->{
                   val settingsIntent= Intent(this, SettingsActivity()::class.java)
@@ -163,6 +151,7 @@ class MainActivity : AppCompatActivity() {
         }
         return true
     }
+
     private fun onFormBackDialog(){
         formBackDialog.show()
         formBackDialog.form_discard_yes.setOnClickListener {
